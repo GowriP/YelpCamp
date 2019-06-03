@@ -11,14 +11,14 @@ var express    = require("express"),
 	User       = require("./models/user"),
 	seedDB	   = require("./seeds");
 
-
+var url = process.env.DATABASEURL || "mongodb+srv://gowri:firstdb@cluster0-eb6la.mongodb.net/test?retryWrites=true&w=majority";
 console.log(process.env.DATABASEURL);
 
 const commentRoutes    = require("./routes/comments"),
 	  campgroundRoutes = require("./routes/campgrounds"),
 	  indexRoutes      = require("./routes/index"); 
 
-mongoose.connect(process.env.DATABASEURL, 
+mongoose.connect(url, 
 {useNewUrlParser: true,
 useCreateIndex: true});
 
