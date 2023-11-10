@@ -11,7 +11,7 @@ var express    = require("express"),
 	User       = require("./models/user"),
 	seedDB	   = require("./seeds");
 
-var url = process.env.DATABASEURL || "mongodb+srv://gowri:firstdb@cluster0-eb6la.mongodb.net/test?retryWrites=true&w=majority";
+var url = process.env.DATABASEURL;
 console.log(process.env.DATABASEURL);
 
 const commentRoutes    = require("./routes/comments"),
